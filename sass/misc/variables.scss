@@ -1,17 +1,15 @@
  /* colors */
- $colors: (
-    primary:#264653,
-    secondary:#2A9D8F,
-    tertiary:#E9C46A,
-    text-color:white
- );
+   $primary:#264653;
+   $secondary:#2A9D8F;
+   $tertiary:#E9C46A;
+   $text-color:white;
 
  /* spacings */
  $spacing-small:2.4rem;
  
  /* font fasmily */
- $font-principal:'Barlow', sans-serif;
- $font-secondary:'roboto slab', serif;
+ $font-primary:'Merriweather', serif;
+ $font-secondary:'Raleway', sans-serif;
 
  /* font sizes */
  $font-large:4.0em;
