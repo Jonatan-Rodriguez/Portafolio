@@ -1,0 +1,89 @@
+.principal{
+    background: linear-gradient($color-secondary 0%, $color-primary 77%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80em;
+
+    &__img1{
+        position: absolute;
+        width: 70em;
+        left: 0;
+        top: 0;
+    }
+
+    &__img2{
+        position: absolute;
+        width: 15em;
+        right: 2em;
+        top: 3em;
+    }
+
+    &__titulo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $text-color;
+        p{
+            font-size: 5em;
+            line-height: 1.5em;
+            font-weight: 500;
+            font-family: $font-secondary;
+            margin: 0px;
+        }
+        h1{
+            font-size: 8em;
+            line-height: 1.5em;
+            font-family: $font-primary;
+        }
+        h2{
+            font-size: 5em;
+            line-height: 1.5em;
+            font-weight: 500;
+            font-family: $font-secondary;
+            margin: 0px;
+        }
+    }
+
+    &__redes{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        a{
+            width: 3em;
+            color: white;
+            margin:2rem $spacing-small;
+        }
+    }
+
+    &__btn{
+        cursor: pointer;
+        width: 6em;
+        position:relative;
+        margin: 5em;
+        
+        a{
+            color: $color-tertiary;
+        }
+    }
+}
+.principal::before{
+    background-color: $color-primary;
+    border-radius: 64px;
+    bottom: -145px;
+    content: "";
+    height: 248px;
+    left: 0px;
+    margin:auto;
+    position: absolute;
+    right: 0px;
+    transform: rotate(45deg);
+    width: 248px;
+}
+
+.informacion{
+    background-color: $color-primary;
+}
