@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Portafolio</title>
 </head>
@@ -23,32 +24,47 @@
             <img class="principal__img1" src="./img/patterns-square.svg" alt="imagen de decoracion">
             <img class="principal__img2" src="./img/pattern-dots.svg" alt="imagen de decoracion">
             <div class="principal__titulo">
-                <p>¡Hola! Me llamo,</p>
-                <h1>Rodriguez Jonatan</h1>
-                <h2><span>Frontend Developer</span></h2>
+                <p data-aos="fade-down" data-aos-delay="700">¡Hola! Me llamo,</p>
+                <h1 data-aos="zoom-in" data-aos-delay="500">Rodriguez Jonatan</h1>
+                <h2 data-aos="fade-up" data-aos-delay="600"><span>Frontend Developer</span></h2>
             </div>
             <div class="principal__redes">
-                <a href=""><iconify-icon width="100%" icon="ri:linkedin-fill"></iconify-icon></a>
-                <a href=""><iconify-icon width="100%" icon="mdi:twitter"></iconify-icon></a>
-                <a href=""><iconify-icon width="100%" icon="mdi:github"></iconify-icon></a>
+                <a href="" data-aos="fade-up-right" data-aos-delay="700"><iconify-icon width="100%" icon="ri:linkedin-fill"></iconify-icon></a>
+                <a href="" data-aos="fade-up-right" data-aos-delay="800"><iconify-icon width="100%" icon="mdi:twitter"></iconify-icon></a>
+                <a href="" data-aos="fade-up-right" data-aos-delay="900"><iconify-icon width="100%" icon="mdi:github"></iconify-icon></a>
             </div>
             <div class="principal__btn">
                 <a href="#sobreMi"><iconify-icon width="100%" icon="material-symbols:arrow-circle-down"></iconify-icon></a>
             </div>
         </section>
         <section id="sobreMi" class="informacion">
-            <div class="informacion__foto">
-                <img src="./img/patterns-dots-photo.svg" alt="imagen de decoracion">
-                <img src="" alt="foto personal">
-                <img src="./img/patterns-wave-photo.svg" alt="imagen de decoracion">
+            <div class="informacion__contenedor">
+                <div class="imagenes">
+                    <img class="img1" src="./img/patterns-dots-photo.svg" alt="imagen de decoracion">
+                    <img class="img2" src="./img/bart.png" alt="foto personal">
+                    <img class="img3" src="./img/patterns-wave-photo.svg" alt="imagen de decoracion">
+                </div>
             </div>
-            <div class="informacion__texto">
-                <h2>Sobre mi</h2>
+            <div class="informacion__titulo">
+                <h2>Sobre mi.</h2>
                 <ul>
                     <li>Perfil</li>
                     <li>Estudios</li>
                     <li>Skills</li>
                 </ul>
+                <div class="informacion__texto">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero laudantium perspiciatis, expedita velit distinctio, neque enim quisquam omnis suscipit, rem ad. Ut hic incidunt quisquam beatae, ea amet dolor ipsum!
+                    </p>
+                    <div class="texto__btn">
+                        <button>
+                            <span class="text">Escribeme</span>
+                        </button>
+                        <button>
+                            <span class="text">Descargar C.V.</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -58,5 +74,13 @@
     </footer>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay:1000,
+            duration: 1500,
+            once: false
+        });
+    </script>
 </body>
 </html>

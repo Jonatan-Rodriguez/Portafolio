@@ -12,7 +12,8 @@
 
 html {
   font-family: Raleway, sans-serif;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   html body {
     margin: 0;
     background-color: rebeccapurple; }
@@ -107,13 +108,14 @@ html {
     transform: translate(0, 5%); }
 
 /* pages */
+/*--------- Seccion pprincipal ---------*/
 .principal {
   background: linear-gradient(#2A9D8F 0%, #264653 77%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80em; }
+  height: 125vh; }
   .principal__img1 {
     position: absolute;
     width: 70em;
@@ -158,9 +160,13 @@ html {
     cursor: pointer;
     width: 6em;
     position: relative;
-    margin: 5em; }
+    margin: 5em;
+    transform: scale(1);
+    transition: transform 0.7s; }
     .principal__btn a {
       color: #E9C46A; }
+  .principal__btn:hover {
+    transform: scale(1.2); }
 
 .principal::before {
   background-color: #264653;
@@ -177,3 +183,118 @@ html {
 
 .informacion {
   background-color: #264653; }
+
+/*------------ Seccion informacion ----------*/
+.informacion {
+  height: 110vh;
+  background-color: #264653;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%; }
+  .informacion__contenedor {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .informacion__contenedor .imagenes {
+      background-color: #E9C46A;
+      width: 355px;
+      height: 475px;
+      position: relative; }
+      .informacion__contenedor .imagenes .img1 {
+        width: 10em;
+        position: absolute;
+        left: -10%;
+        top: -10%; }
+      .informacion__contenedor .imagenes .img2 {
+        width: 355px;
+        height: 475px; }
+      .informacion__contenedor .imagenes .img3 {
+        width: 26em;
+        position: absolute;
+        bottom: -10%;
+        right: -25%; }
+  .informacion__titulo {
+    width: 50%;
+    height: 80%; }
+    .informacion__titulo h2 {
+      font-size: 7em;
+      color: #E9C46A;
+      font-family: "Merriweather", serif;
+      letter-spacing: 8px;
+      margin: 10px 0; }
+    .informacion__titulo ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+      .informacion__titulo ul li {
+        list-style: none;
+        font-size: 2.2em;
+        color: white;
+        margin-bottom: 10px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 4px;
+        cursor: pointer;
+        padding: 8px 16px;
+        margin-right: 15px;
+        background-image: linear-gradient(90deg, #E9C46A, #E9C46A);
+        background-size: 0% 2px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        transition: background-size 300ms ease; }
+      .informacion__titulo ul li:hover {
+        color: #E9C46A;
+        background-size: 100% 2px; }
+  .informacion__texto p {
+    margin: 20px 0;
+    font-size: 1.6em;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 2em; }
+  .informacion__texto .texto__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; }
+    .informacion__texto .texto__btn button {
+      align-items: center;
+      background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+      border: 0;
+      border-radius: 8px;
+      box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      display: flex;
+      font-family: "Merriweather", serif;
+      font-size: 18px;
+      justify-content: center;
+      line-height: 1em;
+      max-width: 100%;
+      min-width: 140px;
+      padding: 3px;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all .3s; }
+    .informacion__texto .texto__btn button:active,
+    .informacion__texto .texto__btn button:hover {
+      outline: 0; }
+    .informacion__texto .texto__btn button span {
+      background-color: #05062d;
+      padding: 16px 24px;
+      border-radius: 6px;
+      width: 100%;
+      height: 100%;
+      transition: 300ms; }
+    .informacion__texto .texto__btn button:hover span {
+      background: none; }
+    .informacion__texto .texto__btn button:active {
+      transform: scale(0.9); }
