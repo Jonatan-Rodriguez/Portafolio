@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <div class="header__ico">
-            <a href=""><h2>JONA/></h2></a>
+            <a href=""><h2>&#60;JONA/&#62;</h2></a>
         </div>
         <div class="header__vinculos">
             <a class="vinculo" href="#sobreMi">Sobre mi</a>
@@ -29,9 +29,9 @@
                 <h2 data-aos="fade-up" data-aos-delay="600"><span>Frontend Developer</span></h2>
             </div>
             <div class="principal__redes">
-                <a href="" data-aos="fade-up-right" data-aos-delay="700"><iconify-icon width="100%" icon="ri:linkedin-fill"></iconify-icon></a>
-                <a href="" data-aos="fade-up-right" data-aos-delay="800"><iconify-icon width="100%" icon="mdi:twitter"></iconify-icon></a>
-                <a href="" data-aos="fade-up-right" data-aos-delay="900"><iconify-icon width="100%" icon="mdi:github"></iconify-icon></a>
+                <a href="" data-aos="fade-up-right" data-aos-delay="700"><iconify-icon class="ico-redes" width="100%" icon="ri:linkedin-fill"></iconify-icon></a>
+                <a href="" data-aos="fade-up-right" data-aos-delay="800"><iconify-icon class="ico-redes" width="100%" icon="mdi:twitter"></iconify-icon></a>
+                <a href="" data-aos="fade-up-right" data-aos-delay="900"><iconify-icon class="ico-redes" width="100%" icon="mdi:github"></iconify-icon></a>
             </div>
             <div class="principal__btn">
                 <a href="#sobreMi"><iconify-icon width="100%" icon="material-symbols:arrow-circle-down"></iconify-icon></a>
@@ -48,21 +48,83 @@
             <div class="informacion__titulo">
                 <h2>Sobre mi.</h2>
                 <ul>
-                    <li>Perfil</li>
-                    <li>Estudios</li>
-                    <li>Skills</li>
+                    <li id="perfil" class="item">Perfil</li>
+                    <li id="estudios" class="">Estudios</li>
+                    <li id="skills" class="">Skills</li>
                 </ul>
                 <div class="informacion__texto">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero laudantium perspiciatis, expedita velit distinctio, neque enim quisquam omnis suscipit, rem ad. Ut hic incidunt quisquam beatae, ea amet dolor ipsum!
-                    </p>
+                    <div id="infoPerfil" class="info info-none">
+                        <p>
+                            <b>💜 Desarrollador Front-End</b> especializado en <u>JavaScript</u>. Creación, prototipado y desarrollo de productos digitales innovadores centrados en el usuario.<br>
+                            Apasionado por el diseño y el emprendimiento. Estoy en constante aprendizaje.<br>
+                            Estudiante de la <a href="https://www.unlam.edu.ar" target="_blank" ><u>Universidad Nacional de la Matanza</u></a> (UNlaM) 👨🏼‍🎓 y <a href="https://www.coderhouse.com" target="_blank" ><u>Coderhouse</u></a> 🚀
+                        </p>
+                    </div>
+                    <div id="infoEstudios" class="info-none">
+                        <p>
+                            <img src="./assets/img/coderHouse-36x36.png" alt="ico coderHouse"> Desarrollo web - <b>Coderhouse</b>
+                        </p>
+                        <br>
+                        <p>
+                            <img src="./assets/img/coderHouse-36x36.png" alt="ico coderHouse"> JavaScript - <b>Coderhouse</b>
+                        </p>
+                        <br>
+                        <p>
+                            <span><u>Cursando actualmente</u></span>
+                        </p>    
+                        <br>
+                        <p>    
+                            <img src="./assets/img/coderHouse-36x36.png""> React JS - <b>Coderhouse</b>
+                        </p>    
+                        <br>
+                        <p>    
+                            <img src="./assets/img/unlam.jpg" alt="img unlam"> Tecnicatura en Desarrollo Web - <b>UNlaM</b>
+                        </p>
+                    </div>
+                    <div id="infoSkills" class="info-none">
+                        <div id="skillL" class="info-none">
+                            <p>
+                                <iconify-icon icon="vscode-icons:file-type-html"></iconify-icon> HTML
+                            </p>
+                            <br>
+                            <p>
+                                <iconify-icon icon="vscode-icons:file-type-css"></iconify-icon> CSS
+                            </p>
+                            <br>
+                            <p>
+                                <iconify-icon icon="logos:javascript"></iconify-icon> JavaScript
+                            </p>
+                            <br>
+                            <p>
+                                <iconify-icon icon="logos:react"></iconify-icon> React JS
+                            </p>
+                        </div>
+                        <div id="skillR" class="info-none">
+                            <p>
+                                <iconify-icon icon="logos:sass"></iconify-icon> Sass
+                            </p>
+                            <br>
+                            <p>
+                                <iconify-icon icon="logos:figma"></iconify-icon> Figma
+                            </p>
+                            <br>
+                            <p>
+                                <iconify-icon icon="logos:java"></iconify-icon> Java
+                            </p>
+                            <br>
+                            <p>
+                                <iconify-icon icon="logos:mysql"></iconify-icon> Sql
+                            </p>
+                        </div>
+                        
+                    </div>
                     <div class="texto__btn">
                         <a href="mailto:jonatarodriguez1998@gmail.com">
                             <button>
                                 <span class="text">Escribeme <iconify-icon class="ico" icon="clarity:email-solid"></iconify-icon></span>
                             </button>
                         </a>
-                        <a href="./assets/pdf/C.V. Jonatan Rodriguez.pdf" download>
+                        <a href="" download>
                             <button>
                                 <span class="text">Descargar C.V. <iconify-icon class="ico" icon="line-md:cloud-download-loop"></iconify-icon></span>
                             </button>
@@ -70,6 +132,9 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section id="portafolio" class="portafolio">
+
         </section>
 
     </main>
