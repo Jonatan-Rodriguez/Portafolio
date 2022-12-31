@@ -1,16 +1,89 @@
 .footer{
+    width: 100%;
+    height: 150px;
+    background-color: $color-secondary;
     
     .footer__container{
+        width: 100%;
+        height: 100%;
+        padding: 0 2em;
+        display: flex;
+        flex-direction: column;
         
         .footer__top{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            border-bottom: 1px solid white;
 
             .footer__ico{
+                background-color: beige;
+                font-size: $font-base;
 
                 a{
-
+                    color: $color-secondary;
                 }
             }
-            
+            .footer__contacto{
+                font-size: $font-base;
+                color: $text-color;
+                text-align: center;
+
+                a{
+                    color: $text-color;
+                }
+                a:link{
+                    color: $text-color;
+                }
+                a:visited{
+                    color: $text-color;
+                }
+
+                .text-front{
+                    color: $color-tertiary;
+                    font-style: bold;
+                }
+            }
+        }
+
+        .footer__bottom{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .footer__texto{
+                font-size: $font-base;
+                color: $text-color;
+            }
+            .footer__redes{
+                width: 100px;
+                height: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                color: white;
+
+                a{
+                    width: 25%;
+                    
+                    .ico-redes-footer{
+                        height: 100%;
+                        width: 100%;
+                        color: white;
+                        transition: all 0.7s;
+                    }
+                    
+                    .ico-redes-footer:hover{
+                        transform: scale(1.2);
+                        color: $color-quarter;
+                    }
+                }
+            }
         }
     }
 }

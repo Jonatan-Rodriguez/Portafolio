@@ -114,6 +114,69 @@ html {
   margin-left: 7px;
   width: 14px; }
 
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: #2A9D8F; }
+  .footer .footer__container {
+    width: 100%;
+    height: 100%;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column; }
+    .footer .footer__container .footer__top {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      border-bottom: 1px solid white; }
+      .footer .footer__container .footer__top .footer__ico {
+        background-color: beige;
+        font-size: 1.6em; }
+        .footer .footer__container .footer__top .footer__ico a {
+          color: #2A9D8F; }
+      .footer .footer__container .footer__top .footer__contacto {
+        font-size: 1.6em;
+        color: white;
+        text-align: center; }
+        .footer .footer__container .footer__top .footer__contacto a {
+          color: white; }
+        .footer .footer__container .footer__top .footer__contacto a:link {
+          color: white; }
+        .footer .footer__container .footer__top .footer__contacto a:visited {
+          color: white; }
+        .footer .footer__container .footer__top .footer__contacto .text-front {
+          color: #E9C46A;
+          font-style: bold; }
+    .footer .footer__container .footer__bottom {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .footer .footer__container .footer__bottom .footer__texto {
+        font-size: 1.6em;
+        color: white; }
+      .footer .footer__container .footer__bottom .footer__redes {
+        width: 100px;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white; }
+        .footer .footer__container .footer__bottom .footer__redes a {
+          width: 25%; }
+          .footer .footer__container .footer__bottom .footer__redes a .ico-redes-footer {
+            height: 100%;
+            width: 100%;
+            color: white;
+            transition: all 0.7s; }
+          .footer .footer__container .footer__bottom .footer__redes a .ico-redes-footer:hover {
+            transform: scale(1.2);
+            color: #E76F51; }
+
 /* pages */
 /*--------- Seccion pprincipal ---------*/
 .principal {
