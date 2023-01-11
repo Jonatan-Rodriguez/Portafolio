@@ -2,6 +2,16 @@
     width: 100%;
     height: 150px;
     background-color: $color-secondary;
+    position: relative;
+
+    &__img{
+        width: 740px;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        transform: rotate(180deg);
+        z-index: 0;
+    }
     
     .footer__container{
         width: 100%;
@@ -9,6 +19,7 @@
         padding: 0 2em;
         display: flex;
         flex-direction: column;
+        
         
         .footer__top{
             width: 100%;
@@ -18,13 +29,15 @@
             align-items: center;
             flex-direction: row;
             border-bottom: 1px solid white;
+            z-index: 1;
 
             .footer__ico{
-                background-color: beige;
-                font-size: $font-base;
-
+                width: 100px;
                 a{
-                    color: $color-secondary;
+                  color: $color-secondary;
+                }
+                img{
+                  width: 100%;
                 }
             }
             .footer__contacto{
@@ -55,6 +68,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            z-index: 1;
 
             .footer__texto{
                 font-size: $font-base;

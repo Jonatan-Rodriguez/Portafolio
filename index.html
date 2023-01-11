@@ -11,11 +11,11 @@
 <body>
     <header class="header">
         <div class="header__ico">
-            <a href=""><h2>&#60;JONA/&#62;</h2></a>
+            <a href=""><img src="./assets/img/jonaLogo.png" alt="icono de pagina" title="icono de pagina"></a>
         </div>
         <div class="header__vinculos">
-            <a class="vinculo" href="#sobreMi">Sobre mi</a>
-            <a class="vinculo" href="#portafolio">Portafolio</a>
+            <a class="vinculo" id="vinculoSobreMi" href="#sobreMi">Sobre mi</a>
+            <a class="vinculo" id="vinculoPortafolio" href="#portafolio">Portafolio</a>
             <a href="mailto:jonatarodriguez1998@gmail.com"><button class="button">Escribeme <iconify-icon id="icoHeader" icon="line-md:email-twotone-alt"></iconify-icon></button></a>
         </div>
     </header>
@@ -29,9 +29,9 @@
                 <h2 data-aos="fade-up" data-aos-delay="600"><span>Frontend Developer</span></h2>
             </div>
             <div class="principal__redes">
-                <a href="" data-aos="fade-up-right" data-aos-delay="700"><iconify-icon class="ico-redes" width="100%" icon="ri:linkedin-fill"></iconify-icon></a>
-                <a href="" data-aos="fade-up-right" data-aos-delay="800"><iconify-icon class="ico-redes" width="100%" icon="mdi:twitter"></iconify-icon></a>
-                <a href="" data-aos="fade-up-right" data-aos-delay="900"><iconify-icon class="ico-redes" width="100%" icon="mdi:github"></iconify-icon></a>
+                <a href="https://www.linkedin.com/in/jonatan-rodriguez-9b1425260/" target="_blank" data-aos="fade-up-right" data-aos-delay="700"><iconify-icon class="ico-redes" width="100%" icon="ri:linkedin-fill"></iconify-icon></a>
+                <a href="https://www.instagram.com/jonaa_jo/" target="_blank" data-aos="fade-up-right" data-aos-delay="800"><iconify-icon class="ico-redes" width="100%" icon="mdi:instagram"></iconify-icon></a>
+                <a href="https://github.com/jonatan-98" target="_blank" data-aos="fade-up-right" data-aos-delay="900"><iconify-icon class="ico-redes" width="100%" icon="mdi:github"></iconify-icon></a>
             </div>
             <div class="principal__btn">
                 <a href="#sobreMi"><iconify-icon width="100%" icon="material-symbols:arrow-circle-down"></iconify-icon></a>
@@ -39,10 +39,10 @@
         </section>
         <section id="sobreMi" class="informacion">
             <div class="informacion__contenedor">
+                <img class="img3" src="./assets/img/patterns-wave-photo.svg" alt="imagen de decoracion">
                 <div class="imagenes">
                     <img class="img1" src="./assets/img/patterns-dots-photo.svg" alt="imagen de decoracion">
                     <img class="img2" src="./assets/img/bart.png" alt="foto personal">
-                    <img class="img3" src="./assets/img/patterns-wave-photo.svg" alt="imagen de decoracion">
                 </div>
             </div>
             <div class="informacion__titulo">
@@ -137,6 +137,7 @@
         </section>
         <section id="portafolio" class="portafolio">
             <div class="section-titulo"><h2>Portafolio.</h2></div>
+            <img class="portafolio__img" src="./assets/img/patterns-dots-photo.svg" alt="imagen de decoracion">
 
             <div class="portafolio__proyectos">
                 <div class="proyecto">
@@ -212,11 +213,11 @@
         <div class="footer__container">
             <div class="footer__top">
                 <div class="footer__ico">
-                    <a href=""><h2>&#60;JONA/&#62;</h2></a>
+                    <a href=""><img src="./assets/img/jonaLogo.png" alt="icono de pagina" title="icono de pagina"></a>
                 </div>
                 <div class="footer__contacto">
                     <p>
-                        Trabajemos juntos | <u><a href="">Contactame aquí.</a></u>
+                        Trabajemos juntos | <u><a href="mailto:jonatarodriguez1998@gmail.com">Contactame aquí.</a></u>
                     </p>
                     <br>
                     <p class="text-front">
@@ -231,12 +232,13 @@
                     </p>
                 </div>
                 <div class="footer__redes">
-                    <a href=""><iconify-icon class="ico-redes-footer" width="100%" icon="ri:linkedin-fill"></iconify-icon></a>
-                    <a href=""><iconify-icon class="ico-redes-footer" width="100%" icon="mdi:twitter"></iconify-icon></a>
-                    <a href=""><iconify-icon class="ico-redes-footer" width="100%" icon="mdi:github"></iconify-icon></a>
+                    <a href="https://www.linkedin.com/in/jonatan-rodriguez-9b1425260/" target="_blank"><iconify-icon class="ico-redes-footer" width="100%" icon="ri:linkedin-fill"></iconify-icon></a>
+                    <a href="https://www.instagram.com/jonaa_jo/" target="_blank"><iconify-icon class="ico-redes-footer" width="100%" icon="mdi:instagram"></iconify-icon></a>
+                    <a href="https://github.com/jonatan-98" target="_blank"><iconify-icon class="ico-redes-footer" width="100%" icon="mdi:github"></iconify-icon></a>
                 </div>
             </div>
         </div>
+        <img class="footer__img" src="./assets/img/patterns-square.svg" alt="imagen de decoracion">
     </footer>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <script src="./js/index.js"></script>

@@ -50,3 +50,41 @@ skills.addEventListener(`click`, ()=>{
     skillL.classList.remove("info-none");
     skillR.classList.remove("info-none");
 });
+
+//observer
+
+const vinculoSobreMi = document.getElementById('vinculoSobreMi');
+const vinculoPortafolio = document.getElementById('vinculoPortafolio');
+const sobreMi = document.getElementById('sobreMi');
+const portafolio = document.getElementById('portafolio');
+
+const cargarImagen = (entradas, observador) => {
+	entradas.forEach((entrada) => {
+		if(entrada.isIntersecting){
+            if(entrada.target.id == "sobreMi"){
+                vinculoSobreMi.classList.add('vinculo--observer');
+            }
+
+            if(entrada.target.id == "portafolio"){
+                vinculoPortafolio.classList.add('vinculo--observer');
+            }
+            
+		} else {
+		    if(entrada.target.id == "sobreMi"){
+                vinculoSobreMi.classList.remove('vinculo--observer');
+            }
+
+            if(entrada.target.id == "portafolio"){
+                vinculoPortafolio.classList.remove('vinculo--observer');
+            }
+		}
+	});
+}
+
+const observador = new IntersectionObserver(cargarImagen, {
+	root: null,
+	threshold: 0.5
+});
+
+observador.observe(sobreMi);
+observador.observe(portafolio);

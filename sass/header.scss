@@ -6,7 +6,7 @@
     width: 100%;
     padding: 0 2em;
     position:fixed;
-    z-index: 1;
+    z-index: 5;
 
     //glassmorphism
     background: rgba( 255, 255, 255, 0.01 );
@@ -16,10 +16,12 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 
     &__ico{
-        background-color: beige;
-        font-size: $font-base;
+        width: 100px;
         a{
           color: $color-secondary;
+        }
+        img{
+          width: 100%;
         }
     }
 
@@ -43,6 +45,11 @@
         }
 
         .vinculo:hover{
+          color: $color-tertiary;
+          background-size: 100% 2px;
+        }
+
+        .vinculo--observer{
           color: $color-tertiary;
           background-size: 100% 2px;
         }
