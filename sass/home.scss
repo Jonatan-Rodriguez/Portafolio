@@ -129,14 +129,14 @@
         .img3{
             width: 26em;
             position: absolute;
-            bottom: 0px;
+            bottom: 20px;
             left: 55%;
         }
 
         .imagenes{
             background-color: $color-tertiary;
             width: 355px;
-            height: 475px;
+            height: 421px;
             position: relative;
             z-index: 1;
             .img1{
@@ -147,7 +147,6 @@
             }
             .img2{
                 width: 355px;
-                height: 475px;
                 z-index: 1;
             }
             

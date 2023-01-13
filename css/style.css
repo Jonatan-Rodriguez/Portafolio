@@ -297,12 +297,12 @@ html {
     .informacion__contenedor .img3 {
       width: 26em;
       position: absolute;
-      bottom: 0px;
+      bottom: 20px;
       left: 55%; }
     .informacion__contenedor .imagenes {
       background-color: #E9C46A;
       width: 355px;
-      height: 475px;
+      height: 421px;
       position: relative;
       z-index: 1; }
       .informacion__contenedor .imagenes .img1 {
@@ -312,7 +312,6 @@ html {
         top: -10%; }
       .informacion__contenedor .imagenes .img2 {
         width: 355px;
-        height: 475px;
         z-index: 1; }
   .informacion__titulo {
     width: 50%;
