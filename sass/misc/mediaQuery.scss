@@ -3,7 +3,7 @@
 768px - 1023px Tablet
 1024px - 4kpx Pc
 */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) { //tablet
     .principal{
         &__titulo{
             p{
@@ -24,13 +24,26 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) { //mobile
+    .section-titulo{
+        font-size: 4em;
+    }
+    
+    .header{
+        &__vinculos{
+            display: none;
+        }
+        .burger{
+            display: block;
+        }
+    }
+    
     .principal{
         &__img1{
-            width: 50em;
+            width: 42.5em;
         }
         &__img2{
-            display: none;
+            width: 10em;
         }
 
         &__titulo{
@@ -51,10 +64,24 @@
         flex-direction: column;
         height: 160vh;
 
+        &__contenedor{
+            .img3{
+                display: none;
+            }
+        }
+
         &__titulo{
             width: 100%;
             height: 60%;
         }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .principal{
+       &__img1{
+        display: none;
+       }
     }
 }
 
