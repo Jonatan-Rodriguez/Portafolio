@@ -325,7 +325,7 @@
 /*------------ Seccion portafolio ----------*/
 
 .portafolio{
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient($color-primary 0%, $color-secondary 77%);
     display: flex;
     align-items: flex-start;
@@ -343,15 +343,16 @@
     }
 
     &__proyectos{
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+        gap: 20px;
         width: 100%;
-        gap: 20px 20px;
 
         .proyecto {
-            width: 49%;
+            width: 100%;
+            max-width: 500px;
             height: 300px;
+            margin: 0 auto;
             border-radius: 20px;
             padding: 5px;
             background-color: $color-quarter;
@@ -402,7 +403,8 @@
                 .info__skills{
                     display: flex;
                     flex-direction: row;
-                    column-gap: 25px;
+                    justify-content: space-between;
+                    column-gap: 20px;
                     font-size: $font-base;
                 }
 
