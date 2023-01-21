@@ -36,14 +36,16 @@ html {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18); }
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /*------------ Seccion menu responsive ----------*/ }
   .header .burger {
     position: relative;
     width: 40px;
     height: 30px;
     background: transparent;
     cursor: pointer;
-    display: none; }
+    display: none;
+    z-index: 7; }
   .header .burger input {
     display: none; }
   .header .burger span {
@@ -155,6 +157,49 @@ html {
   .header .button:active::after {
     transition: 0s;
     transform: translate(0, 5%); }
+  .header .menu {
+    width: 100%;
+    height: 100vh;
+    /* 
+    display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #252e42;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: none; }
+    .header .menu__texto {
+      text-align: center;
+      width: 100%;
+      font-size: 3em;
+      color: #E9C46A;
+      font-family: "Merriweather", serif;
+      letter-spacing: 5px;
+      margin-bottom: 30px; }
+    .header .menu__vinculos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      font-family: "Raleway", sans-serif; }
+      .header .menu__vinculos .vinculo-menu {
+        color: white;
+        font-size: 3.0em;
+        font-weight: 570;
+        letter-spacing: 0.07rem;
+        background-image: linear-gradient(90deg, #E9C46A, #E9C46A);
+        background-size: 0% 2px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        transition: all 0.3s ease; }
+      .header .menu__vinculos .vinculo-menu:hover {
+        color: #E9C46A;
+        background-size: 100% 2px; }
 
 #icoHeader {
   margin-left: 7px;
@@ -541,6 +586,7 @@ html {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          flex-wrap: wrap;
           column-gap: 20px;
           font-size: 1.6em; }
         .portafolio__proyectos .proyecto .proyecto__info .info__btn {
@@ -583,7 +629,9 @@ html {
   .principal__titulo h2 {
     font-size: 4em; }
   .section-titulo {
-    font-size: 5em; } }
+    font-size: 5em; }
+  .footer__img {
+    width: 500px; } }
 
 @media screen and (max-width: 767px) {
   .section-titulo {
@@ -630,7 +678,24 @@ html {
     font-size: 3em; }
   .principal__img1 {
     display: none; }
+  .principal__contenedor {
+    width: 200px;
+    height: 200px;
+    bottom: -115px; }
+  .informacion__titulo ul li {
+    font-size: 1.5em; }
+  .portafolio__img {
+    display: none; }
   .portafolio__proyectos {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
     .portafolio__proyectos .proyecto {
-      height: 200px; } }
+      height: 200px; }
+      .portafolio__proyectos .proyecto .proyecto__info .info__skills {
+        font-size: 1.4em;
+        justify-content: center;
+        gap: 10px; }
+      .portafolio__proyectos .proyecto .proyecto__info .info__btn .card-button {
+        width: 100px;
+        font-size: 1.5em; }
+  .footer .footer__container .footer__bottom .footer__texto {
+    font-size: 1.3em; } }

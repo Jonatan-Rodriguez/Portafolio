@@ -88,3 +88,20 @@ const observador = new IntersectionObserver(cargarImagen, {
 
 observador.observe(sobreMi);
 observador.observe(portafolio);
+
+
+  // funcion de menu
+
+  let switchMenu = document.getElementById(`burger`);
+  let menu = document.getElementById(`menu`);
+
+  switchMenu.addEventListener(`click`, () =>{
+
+    if(switchMenu.checked == true){
+
+      menu.style.display = 'flex';
+      
+    }else{
+        menu.style.display = 'none';
+    }
+  });
