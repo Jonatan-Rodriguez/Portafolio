@@ -626,5 +626,11 @@ html {
           width: 100%; } }
 
 @media screen and (max-width: 425px) {
+  .section-titulo {
+    font-size: 3em; }
   .principal__img1 {
-    display: none; } }
+    display: none; }
+  .portafolio__proyectos {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .portafolio__proyectos .proyecto {
+      height: 200px; } }

@@ -22,6 +22,8 @@
     .section-titulo{
         font-size: 5em;
     }
+
+    
 }
 
 @media screen and (max-width: 767px) { //mobile
@@ -101,13 +103,51 @@
             }
         }
     }
+
+    .portafolio{
+        &__proyectos{
+            .proyecto{
+                
+            }
+            .proyecto__info{
+
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 425px) {
+    .section-titulo{
+        font-size: 3em;
+    }
+    
     .principal{
        &__img1{
         display: none;
        }
+    }
+
+    .informacion{
+        &__titulo{
+            ul{
+
+
+                li{
+                    
+                }
+            }
+        }
+    }
+    .portafolio{
+        &__proyectos{
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            .proyecto{
+                height: 200px;
+            }
+            .proyecto__info{
+
+            }
+        }
     }
 }
 
