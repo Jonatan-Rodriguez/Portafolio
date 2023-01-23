@@ -120,7 +120,7 @@
 
 /*------------ Seccion informacion ----------*/
 .informacion{
-    height: 110vh;
+    min-height: 110vh;
     background-color: $color-primary;
     display: flex;
     flex-direction: row;

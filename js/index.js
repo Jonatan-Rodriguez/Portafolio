@@ -90,18 +90,28 @@ observador.observe(sobreMi);
 observador.observe(portafolio);
 
 
-  // funcion de menu
+// funcion de menu
 
-  let switchMenu = document.getElementById(`burger`);
-  let menu = document.getElementById(`menu`);
+let switchMenu = document.getElementById(`burger`);
+let menu = document.getElementById(`menu`);
+let vinculoSobreMiMenu = document.getElementById(`vinculoSobreMiMenu`);
+let vinculoPortafolioMenu = document.getElementById(`vinculoPortafolioMenu`);
 
-  switchMenu.addEventListener(`click`, () =>{
+switchMenu.addEventListener(`click`, () =>{
 
-    if(switchMenu.checked == true){
+    menu.classList.toggle(`menu-translate`);
+});
 
-      menu.style.display = 'flex';
-      
-    }else{
-        menu.style.display = 'none';
-    }
-  });
+vinculoSobreMiMenu.addEventListener(`click`, () =>{
+    setTimeout(() => {
+        menu.classList.toggle(`menu-translate`);
+        switchMenu.checked = false;
+    }, 300);
+});
+
+vinculoPortafolioMenu.addEventListener(`click`, () =>{
+    setTimeout(() => {
+        menu.classList.toggle(`menu-translate`);
+        switchMenu.checked = false;
+    }, 300);
+});
