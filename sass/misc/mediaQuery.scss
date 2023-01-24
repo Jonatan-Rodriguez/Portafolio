@@ -29,6 +29,31 @@
 
     .portafolio{
         padding-top: 6em;
+        
+        &__proyectos{
+
+            .proyecto{
+                height: 500px;
+                flex-direction: column;
+                justify-content: center;
+
+                .proyecto__img{
+                    position: revert;
+                    height: revert;
+                    padding: 0;
+                    padding-bottom: 3px;
+                }
+                .proyecto__info{
+                    opacity: 1;
+                    transform: revert;
+                    position: revert;
+                }
+            }
+
+            .proyecto:hover {
+                transform: revert;
+            }
+        }
     }
 
     .footer{
@@ -155,7 +180,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
             
             .proyecto{
-                height: 200px;
+                height: 400px;
 
                 .proyecto__info{
                     .info__skills{
