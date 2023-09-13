@@ -1,12 +1,15 @@
 {
   "name": "portafolio",
+  "homepage": "https://Jonatan-Rodriguez.github.io/rick_and_morty",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-sass": "node-sass --include-path scss sass/index.scss css/style.css",
-    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,7 @@
   },
   "homepage": "https://github.com/jonatan-98/Portafolio#readme",
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.20"
   }
