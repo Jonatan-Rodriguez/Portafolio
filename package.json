@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonatan-98/Portafolio.git"
+    "url": "git+https://github.com/Jonatan-Rodriguez/Portafolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jonatan-98/Portafolio/issues"
+    "url": "https://github.com/Jonatan-Rodriguez/Portafolio/issues"
   },
-  "homepage": "https://github.com/jonatan-98/Portafolio#readme",
+  "homepage": "https://github.com/Jonatan-Rodriguez/Portafolio",
   "devDependencies": {
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.20"
