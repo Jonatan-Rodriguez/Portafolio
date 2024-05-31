@@ -23,6 +23,9 @@ Este es mi portafolio personal donde presento información sobre mí, cómo cont
   - Sass
   - JavaScript
 
+- **Deploy:**
+  - Netlify (con dominio personalizado)
+
 
 ## Instalación
 
@@ -48,6 +51,12 @@ Para ver y editar este proyecto en tu entorno local, sigue estos pasos:
 1. Abre `index.html` en tu navegador favorito.
 2. Navega por las diferentes secciones para conocer más sobre mí y mis proyectos.
 3. Usa la sección de contacto para enviarme un mensaje.
+
+## Deploy
+
+Este portafolio está deployado en Netlify y se puede acceder a través del siguiente enlace:
+
+[jonatanrodriguez.com.ar](https://jonatanrodriguez.com.ar)
 
 ## Mejoras Futuras
 
