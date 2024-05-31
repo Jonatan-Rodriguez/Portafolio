@@ -30,7 +30,7 @@ Para ver y editar este proyecto en tu entorno local, sigue estos pasos:
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/tu-usuario/portafolio.git
+    git clone https://github.com/Jonatan-Rodriguez/portafolio.git
     ```
 
 2. Navega al directorio del proyecto:
