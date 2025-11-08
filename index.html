@@ -211,7 +211,7 @@
                                         icon="clarity:email-solid"></iconify-icon></span>
                             </button>
                         </a>
-                        <a href="./assets/pdf/Curriculum Jonatan Rodriguez.pdf" download>
+                        <a href="./assets/pdf/Curriculum Jonatan Rodriguez.pdf" id="boton-descarga-cv" download>
                             <button>
                                 <span class="text">Descargar C.V. <iconify-icon class="ico"
                                         icon="line-md:cloud-download-loop"></iconify-icon></span>
@@ -435,6 +435,23 @@
             once: false
         });
     </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var botonCV = document.getElementById('boton-descarga-cv');
+
+      if (botonCV) {
+        botonCV.addEventListener('click', function() {
+
+          gtag('event', 'download_cv', {
+            'event_category': 'Interaccion',
+            'event_label': 'Descarga de Curriculum'
+          });
+          console.log('Evento GA4: Descarga de CV enviada.');
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
