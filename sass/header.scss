@@ -89,9 +89,10 @@
 
     &__vinculos{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
-        width: 40em;
+        width: auto;
+        gap: 25px;
         font-family:$font-secondary;
 
         .vinculo{
@@ -180,6 +181,79 @@
         transform: translate(0, 5%);
       }
   
+  /* --- Estilos del Selector de Idioma --- */
+  .language-selector {
+      position: relative;
+      display: inline-block;
+      font-family: $font-secondary;
+
+      .lang-btn {
+          background: transparent;
+          border: 1px solid $color-tertiary;
+          color: $text-color;
+          padding: 5px 12px;
+          border-radius: 20px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          transition: all 0.3s ease;
+          font-size: 1.4rem;
+          font-weight: 600;
+
+          &:hover {
+              background: rgba($color-tertiary, 0.2);
+          }
+      }
+
+      // Estado activo del botón (cuando el menú está abierto)
+      &.active .lang-btn {
+          background: rgba($color-tertiary, 0.2);
+      }
+
+      .lang-dropdown {
+          position: absolute;
+          top: 120%;
+          right: 0;
+          background-color: $color-primary;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          padding: 10px 0;
+          list-style: none;
+          min-width: 140px;
+          z-index: 100;
+          
+          // Animación de entrada/salida
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-10px);
+          transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+          li {
+              padding: 10px 20px;
+              color: $text-color;
+              cursor: pointer;
+              transition: background 0.2s;
+              font-size: 1.4rem;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              &:hover {
+                  background-color: $color-secondary;
+              }
+          }
+      }
+
+      // Mostrar menú cuando tiene la clase active
+      &.active .lang-dropdown {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+      }
+  }
+
   /*------------ Seccion menu responsive ----------*/
   .menu{
     width: 100%;
@@ -244,3 +318,8 @@
   width: 14px;
 }
 
+/* Clase auxiliar para animación de traducción */
+.fade-text {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}

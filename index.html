@@ -2,16 +2,14 @@
 <html lang="es">
 
 <head>
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8YEV0WJ0HH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YEV0WJ0HH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-8YEV0WJ0HH');
-</script>
+        gtag('config', 'G-8YEV0WJ0HH');
+    </script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,10 +37,27 @@
         </label>
 
         <div class="header__vinculos">
-            <a class="vinculo" id="vinculoSobreMi" href="#sobreMi">Sobre mi</a>
-            <a class="vinculo" id="vinculoPortafolio" href="#portafolio">Portafolio</a>
-            <a href="mailto:jonatarodriguez1998@gmail.com"><button class="button">Escribeme <iconify-icon id="icoHeader"
-                        icon="line-md:email-twotone-alt"></iconify-icon></button></a>
+            <a class="vinculo" id="vinculoSobreMi" href="#sobreMi" data-i18n="nav_about">Sobre mi</a>
+            <a class="vinculo" id="vinculoPortafolio" href="#portafolio" data-i18n="nav_portfolio">Portafolio</a>
+            <a href="mailto:jonatarodriguez1998@gmail.com">
+                <button class="button">
+                    <span data-i18n="nav_contact">Escribeme</span> 
+                    <iconify-icon id="icoHeader" icon="line-md:email-twotone-alt"></iconify-icon>
+                </button>
+            </a>
+            
+            <div class="language-selector">
+                <button class="lang-btn" onclick="toggleLanguageDropdown(this)">
+                    <iconify-icon icon="mdi:web" width="20"></iconify-icon>
+                    <span class="current-lang">ES</span>
+                    <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+                </button>
+                <ul class="lang-dropdown">
+                    <li onclick="changeLanguage('es')"><iconify-icon icon="emojione:flag-for-spain"></iconify-icon> Español</li>
+                    <li onclick="changeLanguage('en')"><iconify-icon icon="emojione:flag-for-united-states"></iconify-icon> English</li>
+                    <li onclick="changeLanguage('jp')"><iconify-icon icon="emojione:flag-for-japan"></iconify-icon> 日本語</li>
+                </ul>
+            </div>
         </div>
 
         <nav class="menu" id="menu">
@@ -50,10 +65,27 @@
                 <h2>MENU</h2>
             </div>
             <div class="menu__vinculos">
-                <a class="vinculo-menu" id="vinculoSobreMiMenu" href="#sobreMi">Sobre mi</a>
-                <a class="vinculo-menu" id="vinculoPortafolioMenu" href="#portafolio">Portafolio</a>
-                <a href="mailto:jonatarodriguez1998@gmail.com"><button class="button">Escribeme <iconify-icon
-                            id="icoHeader" icon="line-md:email-twotone-alt"></iconify-icon></button></a>
+                <a class="vinculo-menu" id="vinculoSobreMiMenu" href="#sobreMi" data-i18n="nav_about">Sobre mi</a>
+                <a class="vinculo-menu" id="vinculoPortafolioMenu" href="#portafolio" data-i18n="nav_portfolio">Portafolio</a>
+                <a href="mailto:jonatarodriguez1998@gmail.com">
+                    <button class="button">
+                        <span data-i18n="nav_contact">Escribeme</span> 
+                        <iconify-icon id="icoHeader" icon="line-md:email-twotone-alt"></iconify-icon>
+                    </button>
+                </a>
+
+                <div class="language-selector">
+                <button class="lang-btn" onclick="toggleLanguageDropdown(this)">
+                    <iconify-icon icon="mdi:web" width="20"></iconify-icon>
+                    <span class="current-lang">ES</span>
+                    <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+                </button>
+                <ul class="lang-dropdown">
+                    <li onclick="changeLanguage('es')"><iconify-icon icon="emojione:flag-for-spain"></iconify-icon> Español</li>
+                    <li onclick="changeLanguage('en')"><iconify-icon icon="emojione:flag-for-united-states"></iconify-icon> English</li>
+                    <li onclick="changeLanguage('jp')"><iconify-icon icon="emojione:flag-for-japan"></iconify-icon> 日本語</li>
+                </ul>
+            </div>
             </div>
         </nav>
     </header>
@@ -62,9 +94,9 @@
             <img class="principal__img1" src="./assets/img/patterns-square.svg" alt="imagen de decoracion">
             <img class="principal__img2" src="./assets/img/pattern-dots.svg" alt="imagen de decoracion">
             <div class="principal__titulo">
-                <p data-aos="fade-down" data-aos-delay="700">¡Hola! Me llamo,</p>
+                <p data-aos="fade-down" data-aos-delay="700" data-i18n="hero_greeting">¡Hola! Me llamo,</p>
                 <h1 data-aos="zoom-in" data-aos-delay="500">Rodriguez Jonatan</h1>
-                <h2 data-aos="fade-up" data-aos-delay="600"><span>Full-Stack Developer</span></h2>
+                <h2 data-aos="fade-up" data-aos-delay="600"><span data-i18n="hero_role">Full-Stack Developer</span></h2>
             </div>
             <div class="principal__redes">
                 <a href="https://www.linkedin.com/in/jonatan-rodriguez-9b1425260/" target="_blank"
@@ -92,40 +124,44 @@
             </div>
             <div class="informacion__titulo">
                 <div class="section-titulo">
-                    <h2>Sobre mi</h2>
+                    <h2 data-i18n="section_about">Sobre mi</h2>
                 </div>
                 <ul>
-                    <li id="perfil" class="item">Perfil</li>
-                    <li id="estudios" class="">Estudios</li>
-                    <li id="skills" class="">Skills</li>
+                    <li id="perfil" class="item" data-i18n="tab_profile">Perfil</li>
+                    <li id="estudios" class="" data-i18n="tab_studies">Estudios</li>
+                    <li id="skills" class="" data-i18n="tab_skills">Skills</li>
                 </ul>
                 <div class="titulo__texto">
 
-                    <div class="info-viewport"> 
-                        <div class="info-slider"> 
-                            
+                    <div class="info-viewport">
+                        <div class="info-slider">
+
                             <div id="infoPerfil" class="info-panel">
-                                <p>
-                                    Como Desarrollador <b>Full-Stack</b>, me especializo en el ecosistema de <b>JavaScript</b>,
-                                    construyendo aplicaciones robustas y escalables con el stack <b>PERN</b> (PostgreSQL,
+                                <p data-i18n="profile_text">
+                                    Como Desarrollador <b>Full-Stack</b>, me especializo en el ecosistema de
+                                    <b>JavaScript</b>,
+                                    construyendo aplicaciones robustas y escalables con el stack <b>PERN</b>
+                                    (PostgreSQL,
                                     Express, React, Node.js).<br>
-                                    En el <b>Frontend</b>, creo interfaces de usuario dinámicas con React y manejo estados complejos
+                                    En el <b>Frontend</b>, creo interfaces de usuario dinámicas con React y manejo
+                                    estados complejos
                                     con Redux.<br>
-        
+
                                     Para el <b>Backend</b>, desarrollo APIs RESTful eficientes usando Node.js y Express,
-                                    conectándolas a <b>bases de datos</b> PostgreSQL que gestiono con el ORM Sequelize.<br>
-        
+                                    conectándolas a <b>bases de datos</b> PostgreSQL que gestiono con el ORM
+                                    Sequelize.<br>
+
                                     Apasionado por el diseño y el emprendimiento. Estoy en constante aprendizaje.<br>
-        
+
                                     Formado en <a href="https://www.coderhouse.com"
                                         target="_blank"><u>Coderhouse</u></a> 🚀 y <a href="https://www.soyhenry.com"
                                         target="_blank"><u>Soy Henry</u></a> ⭐.
                                 </p>
                             </div>
-        
+
                             <div id="infoEstudios" class="info-panel">
                                 <p>
-                                    <span><u>Completos</u></span>
+                                    <u><span data-i18n="studies_complete">Completos</span></u>
                                 </p>
                                 <br>
                                 <p>
@@ -144,25 +180,28 @@
                                 </p>
                                 <br>
                                 <p>
-                                    <img src="./assets/img/henry-32x32.png" alt="ico unlam"> Full-Stack Developer - <b>Soy
+                                    <img src="./assets/img/henry-32x32.png" alt="ico unlam"> Full-Stack Developer -
+                                    <b>Soy
                                         Henry</b>
                                 </p>
                                 <br>
                                 <p>
-                                    <span><u>Cursando actualmente</u></span>
+                                    <u><span data-i18n="studies_current">Cursando actualmente</span></u>
                                 </p>
                                 <br>
                                 <p>
-                                    <iconify-icon icon="logos:udemy-icon"></iconify-icon> Curso de TypeScript - <b>Udemy</b>
+                                    <iconify-icon icon="logos:udemy-icon"></iconify-icon> Curso de TypeScript -
+                                    <b>Udemy</b>
                                 </p>
                                 <br>
                                 <p>
-                                    <iconify-icon icon="logos:udemy-icon"></iconify-icon> Curso de React Native - <b>Udemy</b>
+                                    <iconify-icon icon="logos:udemy-icon"></iconify-icon> Curso de React Native -
+                                    <b>Udemy</b>
                                 </p>
                             </div>
-        
+
                             <div id="infoSkills" class="info-panel">
-                                <div id="skillL" class="info-none"> 
+                                <div id="skillL" class="info-none">
                                     <p>
                                         <iconify-icon icon="vscode-icons:file-type-html"></iconify-icon> HTML
                                     </p>
@@ -210,17 +249,23 @@
                                 </div>
                             </div>
 
-                        </div> </div> <div class="texto__btn">
+                        </div>
+                    </div>
+                    <div class="texto__btn">
                         <a href="mailto:jonatarodriguez1998@gmail.com">
                             <button>
-                                <span class="text">Escribeme <iconify-icon class="ico"
-                                        icon="clarity:email-solid"></iconify-icon></span>
+                                <span class="text">
+                                    <span data-i18n="nav_contact">Escribeme</span> 
+                                    <iconify-icon class="ico" icon="clarity:email-solid"></iconify-icon>
+                                </span>
                             </button>
                         </a>
                         <a href="./assets/pdf/Curriculum Jonatan Rodriguez.pdf" id="boton-descarga-cv" download>
                             <button>
-                                <span class="text">Descargar C.V. <iconify-icon class="ico"
-                                        icon="line-md:cloud-download-loop"></iconify-icon></span>
+                                <span class="text">
+                                    <span data-i18n="download_cv">Descargar C.V.</span> 
+                                    <iconify-icon class="ico" icon="line-md:cloud-download-loop"></iconify-icon>
+                                </span>
                             </button>
                         </a>
                     </div>
@@ -229,13 +274,12 @@
         </section>
         <section id="portafolio" class="portafolio">
             <div class="section-titulo">
-                <h2>Portafolio</h2>
+                <h2 data-i18n="section_portfolio">Portafolio</h2>
             </div>
             <img class="portafolio__img" src="./assets/img/patterns-dots-photo.svg" alt="imagen de decoracion">
 
             <div class="portafolio__proyectos">
 
-                <!----------------------- PROYECTO 1 -------------------------->
                 <div class="proyecto">
                     <div class="proyecto__img">
                         <img src="./assets/img/rick-and-morty.png" alt="img Rick and Morty">
@@ -272,18 +316,21 @@
                         </div>
                         <div class="info__btn">
                             <a href="https://rick-and-morty-front-8fqy.onrender.com" target="_blank">
-                                <button class="card-button">Demo <iconify-icon
-                                        icon="mingcute:external-link-line"></iconify-icon></button>
+                                <button class="card-button">
+                                    <span data-i18n="project_demo">Demo</span> 
+                                    <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
+                                </button>
                             </a>
                             <a href="https://github.com/Jonatan-Rodriguez/rick_and_morty" target="_blank">
-                                <button class="card-button">Codigo <iconify-icon
-                                        icon="mingcute:external-link-line"></iconify-icon></button>
+                                <button class="card-button">
+                                    <span data-i18n="project_code">Codigo</span> 
+                                    <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!----------------------- PROYECTO 2 -------------------------->
                 <div class="proyecto">
                     <div class="proyecto__img">
                         <img src="./assets/img/portafolio.png" alt="img portafolio">
@@ -308,18 +355,21 @@
                         </div>
                         <div class="info__btn">
                             <a href="https://jonatanrodriguez.com.ar" target="_blank">
-                                <button class="card-button">Demo <iconify-icon
-                                        icon="mingcute:external-link-line"></iconify-icon></button>
+                                <button class="card-button">
+                                    <span data-i18n="project_demo">Demo</span> 
+                                    <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
+                                </button>
                             </a>
                             <a href="https://github.com/Jonatan-Rodriguez/Portafolio" target="_blank">
-                                <button class="card-button">Codigo <iconify-icon
-                                        icon="mingcute:external-link-line"></iconify-icon></button>
+                                <button class="card-button">
+                                    <span data-i18n="project_code">Codigo</span> 
+                                    <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!----------------------- PROYECTO 3 -------------------------->
                 <div class="proyecto">
                     <div class="proyecto__img">
                         <img src="./assets/img/pawBnB.jpeg" alt="img ParwBnB">
@@ -347,18 +397,21 @@
                         </div>
                         <div class="info__btn">
                             <a href="https://front-end-paw-bn-b.vercel.app" target="_blank">
-                                <button class="card-button">Demo <iconify-icon
-                                        icon="mingcute:external-link-line"></iconify-icon></button>
+                                <button class="card-button">
+                                    <span data-i18n="project_demo">Demo</span> 
+                                    <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
+                                </button>
                             </a>
                             <a href="https://github.com/SamuelDTRI/FrontEndPawBnB.git" target="_blank">
-                                <button class="card-button">Codigo <iconify-icon
-                                        icon="mingcute:external-link-line"></iconify-icon></button>
+                                <button class="card-button">
+                                    <span data-i18n="project_code">Codigo</span> 
+                                    <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!----------------------- PROYECTO 4 -------------------------->
                 <div class="proyecto">
                     <div class="proyecto__img">
                         <img src="./assets/img/blue cloud.png" alt="img blue cloud">
@@ -383,18 +436,21 @@
                         </div>
                         <div class="info__btn">
                             <a href="https://blue-cloud-app.netlify.app" target="_blank">
-                                <button class="card-button">Demo <iconify-icon
-                                        icon="mingcute:external-link-line"></iconify-icon></button>
+                                <button class="card-button">
+                                    <span data-i18n="project_demo">Demo</span> 
+                                    <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
+                                </button>
                             </a>
                             <a href="https://github.com/Jonatan-Rodriguez/app_clima" target="_blank">
-                                <button class="card-button">Codigo <iconify-icon
-                                        icon="mingcute:external-link-line"></iconify-icon></button>
+                                <button class="card-button">
+                                    <span data-i18n="project_code">Codigo</span> 
+                                    <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
-                <!----------------------------------------------------------->
-            </div>
+                </div>
         </section>
     </main>
     <footer class="footer">
@@ -405,17 +461,18 @@
                 </div>
                 <div class="footer__contacto">
                     <p>
-                        Trabajemos juntos | <u><a href="mailto:jonatarodriguez1998@gmail.com">Contactame aquí.</a></u>
+                        <span data-i18n="footer_work">Trabajemos juntos</span> | 
+                        <u><a href="mailto:jonatarodriguez1998@gmail.com" data-i18n="footer_contact">Contactame aquí.</a></u>
                     </p>
                     <br>
-                    <p class="text-front">
+                    <p class="text-front" data-i18n="hero_role">
                         Full-Stack developer
                     </p>
                 </div>
             </div>
             <div class="footer__bottom">
                 <div class="footer__texto">
-                    <p>
+                    <p data-i18n="footer_created">
                         Creado con ❤ por Jona
                     </p>
                 </div>
@@ -442,22 +499,22 @@
         });
     </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var botonCV = document.getElementById('boton-descarga-cv');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var botonCV = document.getElementById('boton-descarga-cv');
 
-      if (botonCV) {
-        botonCV.addEventListener('click', function() {
+            if (botonCV) {
+                botonCV.addEventListener('click', function () {
 
-          gtag('event', 'download_cv', {
-            'event_category': 'Interaccion',
-            'event_label': 'Descarga de Curriculum'
-          });
-          console.log('Evento GA4: Descarga de CV enviada.');
+                    gtag('event', 'download_cv', {
+                        'event_category': 'Interaccion',
+                        'event_label': 'Descarga de Curriculum'
+                    });
+                    console.log('Evento GA4: Descarga de CV enviada.');
+                });
+            }
         });
-      }
-    });
-  </script>
+    </script>
 </body>
 
 </html>

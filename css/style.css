@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* externos */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap");
 /* misc */
@@ -106,9 +107,10 @@ html img {
 }
 .header__vinculos {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  width: 40em;
+  width: auto;
+  gap: 25px;
   font-family: "Raleway", sans-serif;
 }
 .header__vinculos .vinculo {
@@ -186,6 +188,69 @@ html img {
   transform: translate(0, 5%);
 }
 .header {
+  /* --- Estilos del Selector de Idioma --- */
+}
+.header .language-selector {
+  position: relative;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+}
+.header .language-selector .lang-btn {
+  background: transparent;
+  border: 1px solid #E9C46A;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.header .language-selector .lang-btn:hover {
+  background: rgba(233, 196, 106, 0.2);
+}
+.header .language-selector.active .lang-btn {
+  background: rgba(233, 196, 106, 0.2);
+}
+.header .language-selector .lang-dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: #264653;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 10px 0;
+  list-style: none;
+  min-width: 140px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.header .language-selector .lang-dropdown li {
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header .language-selector .lang-dropdown li:hover {
+  background-color: #2A9D8F;
+}
+.header .language-selector.active .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.header {
   /*------------ Seccion menu responsive ----------*/
 }
 .header .menu {
@@ -242,6 +307,12 @@ html img {
 #icoHeader {
   margin-left: 7px;
   width: 14px;
+}
+
+/* Clase auxiliar para animación de traducción */
+.fade-text {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .footer {
