@@ -1,15 +1,11 @@
-/* externos */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap');
-
 /* misc */
-@import './misc/variables.scss';
-@import './misc/normalize.scss';
+@use './misc/normalize';
 
 /* partials */
-@import './header.scss';
-@import './footer.scss';
+@use './header';
+@use './footer';
 
 /* pages */
-@import './home.scss';
+@use './home';
 
-@import './misc/mediaQuery.scss';
+@use './misc/mediaQuery';

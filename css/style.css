@@ -1,11 +1,5 @@
 @charset "UTF-8";
-/* externos */
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap");
 /* misc */
-/* colors */
-/* spacings */
-/* font fasmily */
-/* font sizes */
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +23,10 @@ html img {
 }
 
 /* partials */
+/* colors */
+/* spacings */
+/* font fasmily */
+/* font sizes */
 .header {
   display: flex;
   align-items: center;
