@@ -8,7 +8,10 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'G-8YEV0WJ0HH');
+        gtag('config', 'G-8YEV0WJ0HH', {
+            'cookie_domain': 'jonatan-rodriguez.netlify.app', 
+            'cookie_flags': 'SameSite=None;Secure'
+        });
 
         // Función para el CV (la que ya tienes)
         function gtag_report_conversion(url) {
