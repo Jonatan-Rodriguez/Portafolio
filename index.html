@@ -12,6 +12,26 @@
             'cookie_domain': 'jonatan-rodriguez.netlify.app', 
             'cookie_flags': 'SameSite=None;Secure'
         });
+
+        // Función para el CV (la que ya tienes)
+        function gtag_report_conversion(url) {
+        gtag('event', 'descarga_cv', {
+            'event_category': 'Interaccion',
+            'event_label': 'Descarga de Curriculum',
+            'value': 1
+        });
+        return true;
+        }
+
+        // NUEVA FUNCIÓN PARA PROYECTOS
+        function trackProject(nombreProyecto, tipoBoton) {
+            gtag('event', 'click_proyecto', {
+                'event_category': 'Portafolio',
+                'event_label': nombreProyecto,
+                'tipo_boton': tipoBoton
+            });
+            return true;
+        }
     </script>
 
     <meta charset="UTF-8">
@@ -271,17 +291,6 @@
                                 </span>
                             </button>
                         </a>
-
-                        <script>
-                        function gtag_report_conversion(url) {
-                        gtag('event', 'descarga_cv', {
-                            'event_category': 'Interaccion',
-                            'event_label': 'Descarga de Curriculum',
-                            'value': 1
-                        });
-                        return true;
-                        }
-                        </script>
                     </div>
                 </div>
             </div>
@@ -294,6 +303,7 @@
 
             <div class="portafolio__proyectos">
 
+                <!------------ 1° PROYECTO ----------->
                 <div class="proyecto">
                     <div class="proyecto__img">
                         <img src="./assets/img/rick-and-morty.png" alt="img Rick and Morty">
@@ -329,13 +339,14 @@
                             </p>
                         </div>
                         <div class="info__btn">
-                            <a href="https://rick-and-morty-front-8fqy.onrender.com" target="_blank">
+                            <a href="https://rick-and-morty-front-8fqy.onrender.com" target="_blank" onclick="trackProject('Rick and Morty', 'Demo')"> 
                                 <button class="card-button">
                                     <span data-i18n="project_demo">Demo</span> 
                                     <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
                                 </button>
                             </a>
-                            <a href="https://github.com/Jonatan-Rodriguez/rick_and_morty" target="_blank">
+                            
+                            <a href="https://github.com/Jonatan-Rodriguez/rick_and_morty" target="_blank" onclick="trackProject('Rick and Morty', 'Codigo')">
                                 <button class="card-button">
                                     <span data-i18n="project_code">Codigo</span> 
                                     <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
@@ -345,6 +356,7 @@
                     </div>
                 </div>
 
+                <!------------ 2° PROYECTO ----------->
                 <div class="proyecto">
                     <div class="proyecto__img">
                         <img src="./assets/img/portafolio.png" alt="img portafolio">
@@ -368,13 +380,13 @@
                             </p>
                         </div>
                         <div class="info__btn">
-                            <a href="https://jonatanrodriguez.com.ar" target="_blank">
+                            <a href="https://jonatanrodriguez.com.ar" target="_blank" onclick="trackProject('Portafolio', 'Demo')">
                                 <button class="card-button">
                                     <span data-i18n="project_demo">Demo</span> 
                                     <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
                                 </button>
                             </a>
-                            <a href="https://github.com/Jonatan-Rodriguez/Portafolio" target="_blank">
+                            <a href="https://github.com/Jonatan-Rodriguez/Portafolio" target="_blank" onclick="trackProject('Portafolio', 'Codigo')">
                                 <button class="card-button">
                                     <span data-i18n="project_code">Codigo</span> 
                                     <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
@@ -384,6 +396,7 @@
                     </div>
                 </div>
 
+                <!------------ 3° PROYECTO ----------->
                 <div class="proyecto">
                     <div class="proyecto__img">
                         <img src="./assets/img/pawBnB.jpeg" alt="img ParwBnB">
@@ -410,13 +423,13 @@
                             </p>
                         </div>
                         <div class="info__btn">
-                            <a href="https://front-end-paw-bn-b.vercel.app" target="_blank">
+                            <a href="https://front-end-paw-bn-b.vercel.app" target="_blank" onclick="trackProject('PawBnB', 'Demo')">
                                 <button class="card-button">
                                     <span data-i18n="project_demo">Demo</span> 
                                     <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
                                 </button>
                             </a>
-                            <a href="https://github.com/SamuelDTRI/FrontEndPawBnB.git" target="_blank">
+                            <a href="https://github.com/SamuelDTRI/FrontEndPawBnB.git" target="_blank" onclick="trackProject('PawBnB', 'Codigo')">
                                 <button class="card-button">
                                     <span data-i18n="project_code">Codigo</span> 
                                     <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
@@ -426,6 +439,7 @@
                     </div>
                 </div>
 
+                <!------------ 4° PROYECTO ----------->
                 <div class="proyecto">
                     <div class="proyecto__img">
                         <img src="./assets/img/Latte Art.png" alt="img blue cloud">
@@ -446,13 +460,13 @@
                             </p>
                         </div>
                         <div class="info__btn">
-                            <a href="https://latte-arte.netlify.app/" target="_blank">
+                            <a href="https://latte-arte.netlify.app/" target="_blank" onclick="trackProject('Landing Cafeteria', 'Demo')">
                                 <button class="card-button">
                                     <span data-i18n="project_demo">Demo</span> 
                                     <iconify-icon icon="mingcute:external-link-line"></iconify-icon>
                                 </button>
                             </a>
-                            <a href="https://github.com/Jonatan-Rodriguez/cafeteria-landing-page.git" target="_blank">
+                            <a href="https://github.com/Jonatan-Rodriguez/cafeteria-landing-page.git" target="_blank" onclick="trackProject('Landing Cafeteria', 'Codigo')">
                                 <button class="card-button">
                                     <span data-i18n="project_code">Codigo</span> 
                                     <iconify-icon icon="mingcute:external-link-line"></iconify-icon>

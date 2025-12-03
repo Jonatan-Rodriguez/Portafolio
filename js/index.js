@@ -60,16 +60,34 @@ const vinculoSobreMi = document.getElementById('vinculoSobreMi');
 const vinculoPortafolio = document.getElementById('vinculoPortafolio');
 const sobreMi = document.getElementById('sobreMi');
 const portafolio = document.getElementById('portafolio');
+let portafolioVisto = false;
+let sobreMiVisto = false;
 
 const cargarImagen = (entradas, observador) => {
 	entradas.forEach((entrada) => {
 		if(entrada.isIntersecting){
             if(entrada.target.id == "sobreMi"){
                 vinculoSobreMi.classList.add('vinculo--observer');
+
+                if (!sobreMiVisto && typeof gtag === 'function') {
+                    gtag('event', 'vista_seccion', {
+                        'event_category': 'Navegacion',
+                        'event_label': 'Seccion Sobre Mi'
+                    });
+                    sobreMiVisto = true;
+                }
             }
 
             if(entrada.target.id == "portafolio"){
                 vinculoPortafolio.classList.add('vinculo--observer');
+
+                if (!portafolioVisto && typeof gtag === 'function') {
+                    gtag('event', 'vista_seccion', {
+                        'event_category': 'Navegacion',
+                        'event_label': 'Seccion Portafolio'
+                    });
+                    portafolioVisto = true;
+                }
             }
             
 		} else {
