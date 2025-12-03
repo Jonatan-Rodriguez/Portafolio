@@ -2,8 +2,6 @@
 
 ![portafolio](https://github.com/Jonatan-Rodriguez/Portafolio/assets/137853210/6bd53578-b145-4fce-9a59-435d09bddd6b)
 
-
-
 ## Descripción
 
 Este es mi portafolio personal donde presento información sobre mí, cómo contactarme y una colección de mis proyectos web. Está diseñado para mostrar mis habilidades y experiencia en desarrollo web.
@@ -24,8 +22,7 @@ Este es mi portafolio personal donde presento información sobre mí, cómo cont
   - JavaScript
 
 - **Deploy:**
-  - Netlify (con dominio personalizado)
-
+  - Netlify
 
 ## Instalación
 
@@ -33,7 +30,7 @@ Para ver y editar este proyecto en tu entorno local, sigue estos pasos:
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/Jonatan-Rodriguez/portafolio.git
+    git clone [https://github.com/Jonatan-Rodriguez/portafolio.git](https://github.com/Jonatan-Rodriguez/portafolio.git)
     ```
 
 2. Navega al directorio del proyecto:
@@ -56,7 +53,7 @@ Para ver y editar este proyecto en tu entorno local, sigue estos pasos:
 
 Este portafolio está deployado en Netlify y se puede acceder a través del siguiente enlace:
 
-[jonatanrodriguez.com.ar](https://jonatanrodriguez.com.ar)
+[jonatan-rodriguez.netlify.app](https://jonatan-rodriguez.netlify.app)
 
 ## Mejoras Futuras
 
