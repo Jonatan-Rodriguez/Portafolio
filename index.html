@@ -260,7 +260,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="./assets/pdf/Curriculum Jonatan Rodriguez.pdf" id="boton-descarga-cv" download>
+                        <a href="./assets/pdf/Curriculum Jonatan Rodriguez.pdf" onclick="return gtag_report_conversion(this.href);" download>
                             <button>
                                 <span class="text">
                                     <span data-i18n="download_cv">Descargar C.V.</span> 
@@ -268,6 +268,17 @@
                                 </span>
                             </button>
                         </a>
+
+                        <script>
+                        function gtag_report_conversion(url) {
+                        gtag('event', 'descarga_cv', {
+                            'event_category': 'Interaccion',
+                            'event_label': 'Descarga de Curriculum',
+                            'value': 1
+                        });
+                        return true;
+                        }
+                        </script>
                     </div>
                 </div>
             </div>
@@ -495,23 +506,5 @@
             once: false
         });
     </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var botonCV = document.getElementById('boton-descarga-cv');
-
-            if (botonCV) {
-                botonCV.addEventListener('click', function () {
-
-                    gtag('event', 'download_cv', {
-                        'event_category': 'Interaccion',
-                        'event_label': 'Descarga de Curriculum'
-                    });
-                    console.log('Evento GA4: Descarga de CV enviada.');
-                });
-            }
-        });
-    </script>
 </body>
-
 </html>
