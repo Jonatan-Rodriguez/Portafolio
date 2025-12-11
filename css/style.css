@@ -640,6 +640,10 @@ html img {
 .informacion__titulo .titulo__texto #infoSkills .info-none {
   display: none;
 }
+.informacion__titulo .titulo__texto #infoEstudios a {
+  color: #E9C46A;
+  font-weight: bold;
+}
 .informacion__titulo .titulo__texto .texto__btn {
   display: flex;
   flex-direction: row;
