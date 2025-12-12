@@ -477,7 +477,7 @@ html img {
   height: 250px;
   background-color: #264653;
   position: absolute;
-  bottom: -170px;
+  bottom: -190px;
   transform: rotate(45deg);
   border-radius: 20%;
   clip-path: polygon(0 0, 0 100%, 100% 0);
